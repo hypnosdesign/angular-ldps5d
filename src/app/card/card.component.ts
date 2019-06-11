@@ -13,7 +13,7 @@ import {Items} from '../items';
           <img  [src]='card.slide[contatore]' [alt]="'foto ' + card.slide[contatore]">
           <div class="card__btn" >
             <div class="card__btn--left" (click)="indietro()">
-              INDIETRO"
+              INDIETRO
             </div>
             <div class="card__btn--right" (click)="avanti_2($event)">
               AVANTI
