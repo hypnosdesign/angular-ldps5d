@@ -7,10 +7,11 @@ import { HelloComponent } from './hello.component';
 import { CardsComponent } from './cards/cards.component';
 import { CardComponent } from './card/card.component';
 import { ItemsService } from './items.service';
+import { SlideComponent } from './slide/slide.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, CardsComponent, CardComponent ],
+  declarations: [ AppComponent, HelloComponent, CardsComponent, CardComponent, SlideComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ItemsService]
 })
