@@ -49,7 +49,14 @@ img {
 
 .card__image {
   position: relative;
+  transition: .2s ease-out;
+}
 
+.card__image:hover {
+  transform: scale(1.05);
+  border-radius: 3px;
+  overflow: hidden;
+  backface-visibility: hidden;
 }
 
 .card__image img {
