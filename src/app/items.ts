@@ -1,4 +1,4 @@
-export interface Items [{
+export interface Items {
   id: number;
   titolo: string;
   sotto_titolo: string;
@@ -6,4 +6,4 @@ export interface Items [{
   foto: string;
   glide: boolean;
   slide?: string[];
-}]
+}
