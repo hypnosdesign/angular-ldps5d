@@ -6,7 +6,5 @@ import { Component } from '@angular/core';
   <app-cards></app-cards>
   `
 })
-export class AppComponent  {
-  name = 'Angular';
-}
+export class AppComponent  {}
 
