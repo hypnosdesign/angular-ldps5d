@@ -63,24 +63,24 @@ export class CardComponent {
 
 
     const slide = this.cards;
-    // slide.filter((item) => item.slide).forEach((item,i) => {
-    //   let titleJson = item.titolo.toLowerCase();
-    //   if(titleHtml === titleJson){
-    //     console.log(item.titolo.toLowerCase(), i, item.slide);
-    //     if (this.contatore >= item.slide.length - 1) {
-    //       this.contatore = 0;
-    //     } else {
-    //       this.contatore += 1;
+    slide.filter((item) => item.slide).forEach((item,i) => {
+      let titleJson = item.titolo.toLowerCase();
+      if(titleHtml === titleJson){
+        console.log(item.titolo.toLowerCase(), i, item.slide);
+        if (this.contatore >= item.slide.length - 1) {
+          this.contatore = 0;
+        } else {
+          this.contatore += 1;
 
-    //     }
-    //     console.log(count);
-
-
-    //   }
+        }
+        console.log(count);
 
 
+      }
 
-    //}) 
+
+
+    }) 
     }
 
 }
