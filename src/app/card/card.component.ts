@@ -59,9 +59,6 @@ export class CardComponent {
   avanti_2(event) {
     let titleHtml = event.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.querySelector('.card__text h1').textContent.toLowerCase();
 
-    console.log(event.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.querySelector('.card__text h1').textContent.toLowerCase());
-
-
     const slide = this.cards;
     slide.filter((item) => item.slide).forEach((item,i) => {
       let titleJson = item.titolo.toLowerCase();
@@ -71,15 +68,9 @@ export class CardComponent {
           this.contatore = 0;
         } else {
           this.contatore += 1;
-
         }
-        console.log(count);
-
-
+        console.log(contatore);
       }
-
-
-
     }) 
     }
 
