@@ -4,7 +4,7 @@ import {Items} from './items';
 export class ItemsService {
 pathGithub = 'https://github.com/hypnosdesign/angular-ldps5d/raw/master/src/'
 
-cards: Items[] = [
+cards: Items = [
     {
       id: 1,
       titolo: 'card numero uno',
