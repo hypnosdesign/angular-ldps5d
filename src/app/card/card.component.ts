@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import {Items} from '../items';
+import {ItemsService} from '../items.service';
 
 @Component({
   selector: 'app-card',
@@ -8,6 +9,7 @@ import {Items} from '../items';
       <div class="card__image" *ngIf="!card.slide; else slides" >
         <img [src]='card.foto' [alt]="'foto ' + card.titolo" >
       </div>
+      <!-- <app-slide [slides]='itemsService.cards'></app-slide> -->
       <ng-template #slides>
         <div class="card__image">
           <img  [src]='card.slide[contatore]' [alt]="'foto ' + card.slide[contatore]">
@@ -34,6 +36,8 @@ import {Items} from '../items';
 export class CardComponent {
   @Input() cards: Items[];
   contatore = 0;
+
+  constructor(public itemsService: ItemsService) { }
 
   avanti() {
     const slide = this.cards[0].slide;
