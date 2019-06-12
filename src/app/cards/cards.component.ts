@@ -5,6 +5,7 @@ import {ItemsService} from '../items.service';
   selector: 'app-cards',
   template: `
   <app-card [cards]="itemsService.cards"></app-card>
+  <app-slide [items]='itemsService.cards'></app-slide>
   `
 })
 export class CardsComponent {
