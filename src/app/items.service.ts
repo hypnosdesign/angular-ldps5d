@@ -40,7 +40,7 @@ cards: Items = <any>[
       ]
     },
     {
-      id: 1,
+      id: 4,
       titolo: 'card numero quattro',
       sotto_titolo: 'sotto titolo card numero quattro',
       descrizione: `Questa è una descrizione per la card numero quattro`,
