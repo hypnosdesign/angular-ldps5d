@@ -6,10 +6,11 @@ import { CardsComponent } from './cards/cards.component';
 import { CardComponent } from './card/card.component';
 import { ItemsService } from './items.service';
 import { SlideComponent } from './slide/slide.component';
+import { SlideImageComponent } from './slide/slide-image.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, CardsComponent, CardComponent, SlideComponent ],
+  declarations: [ AppComponent, CardsComponent, CardComponent, SlideComponent, SlideImageComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ItemsService]
 })
