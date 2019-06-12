@@ -1,14 +1,15 @@
 import { Component, Input} from '@angular/core';
-import {ItemsService} from '../items.service';
+
 @Component({
   selector: 'app-slide-image',
   template: `
-  <div class="card__image">
-        <img [src]='cardImage.foto' [alt]="'foto ' + cardImage.titolo" >
-  </div>
+
+        <img [src]='cardImage' [alt]="'foto ' + cardTitolo">
+  
   `
 })
 export class SlideImageComponent {
-@Input() cardImage = this.itemsService.cards;
-constructor(public itemsService: ItemsService){}
+@Input() cardImage: string;
+@Input() cardTitolo: string;
+
 }

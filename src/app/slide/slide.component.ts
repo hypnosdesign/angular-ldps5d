@@ -8,11 +8,21 @@ import {ItemsService} from '../items.service';
   template: `
     <div class="card" *ngFor="let card of itemsService.cards">
 
-      <!-- <app-slide-image [cardImage]></app-slide-image> -->
+      <app-slide-image 
+        *ngIf='!card.slide'
+        class="card__image" 
+        [cardImage]='card.foto' 
+        [cardTitolo]='card.titolo'
+      ></app-slide-image>
 
-      <div class="card__image">
-        <img [src]='card.foto' [alt]="'foto ' + card.titolo" >
-      </div>
+      <app-slider-image
+        *ngIf='card.slide'
+        class="card__image"
+        [images]='card.slide'
+        [text]='card.titolo'
+        (next)='vaiavanti(event)'
+        (prev)='vaiindietro(event)'
+      ></app-slider-image>
 
       <div class="card__text">
         <h1 [innerHtml]='card.titolo'></h1>
@@ -23,6 +33,5 @@ import {ItemsService} from '../items.service';
   `
 })
 export class SlideComponent {
-
   constructor(public itemsService: ItemsService){}
 }
